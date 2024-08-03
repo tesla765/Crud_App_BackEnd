@@ -1,8 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Product = require('./models/product.model.js');
-const productRoute = require("./routes/product.route.js")
-const app = express()
+const productRoute = require("./routes/product.route.js");
+const app = express();
 
 //middleware
 app.use(express.json());   
@@ -84,10 +84,10 @@ app.get('/', (req, res) => {
 
 
 // to connect to MongoDB 
-mongoose.connect("mongodb+srv://21ucc011:43mfSAGQSlDbODqc@cluster0.r2cbrdk.mongodb.net/NODE?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://21ucc011:oa4vjbpiRkXloD2N@cluster0.bxuysxb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 .then(() => {
     console.log("Connected to Database!");
-    app.listen(3000, () =>{
+    app.listen(80, () =>{
         console.log('Server is UP!')
     });
 })
